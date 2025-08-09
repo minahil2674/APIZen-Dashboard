@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-chart-line"></i> Daily Dashboard</h1>
+            <p class="subtitle">Your personalized information hub</p>
+        </header>
+
+        <!-- Weather Section -->
+        <section class="weather-section">
+            <div class="section-header">
+                <h2><i class="fas fa-cloud-sun"></i> Weather</h2>
+                <button id="refresh-weather" class="refresh-btn">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+            <div id="weather-content" class="content-grid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading weather data...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="news-section">
+            <div class="section-header">
+                <h2><i class="fas fa-newspaper"></i> Latest News</h2>
+                <select id="news-category">
+                    <option value="general">General</option>
+                    <option value="technology">Technology</option>
+                    <option value="science">Science</option>
+                    <option value="health">Health</option>
+                    <option value="business">Business</option>
+                </select>
+            </div>
+            <div id="news-content" class="content-grid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading news...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quotes Section -->
+        <section class="quotes-section">
+            <div class="section-header">
+                <h2><i class="fas fa-quote-left"></i> Daily Inspiration</h2>
+                <button id="refresh-quote" class="refresh-btn">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+            <div id="quote-content" class="content-grid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading inspiration...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Random Activity Section -->
+        <section class="activity-section">
+            <div class="section-header">
+                <h2><i class="fas fa-lightbulb"></i> Bored? Try This!</h2>
+                <button id="refresh-activity" class="refresh-btn">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+            <div id="activity-content" class="content-grid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Finding activities...</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="error-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3><i class="fas fa-exclamation-triangle"></i> Error</h3>
+            <p id="error-message"></p>
+            <button id="retry-btn" class="btn-primary">Retry</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
