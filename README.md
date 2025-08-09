@@ -39,4 +39,4 @@ ZenDash is a clean and simple personal dashboard built using HTML, CSS, and Java
 ---
 
 ## 👩‍💻 Made by Minahil  
-Feel free to use for personal or learning purposes.
+
